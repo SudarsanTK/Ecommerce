@@ -38,7 +38,7 @@ Strongly Typed Views – Views bound to specific models.
 
 Forms – Implemented using Html.BeginForm, TextBoxFor, and other Razor helpers.
 
-Data Annotations – Validation attributes like [Required], [Range].
+Data Annotations – Validation attributes like [Required].
 
 Server-side Validation – Validation with ModelState.IsValid.
 
