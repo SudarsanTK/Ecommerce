@@ -1,0 +1,57 @@
+﻿@{
+    Layout = null; // Optional: remove layout if you want full control
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        body {
+            background: #f8f9fa;
+        }
+        .portal-card {
+            border-radius: 1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .portal-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 1rem 2rem rgba(0,0,0,0.2);
+        }
+        .portal-icon {
+            font-size: 4rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container py-5">
+        <div class="text-center mb-5">
+            <h1 class="display-4 fw-bold">Welcome to Online Shopping</h1>
+            <p class="lead text-muted">Choose your portal to continue</p>
+        </div>
+
+        <div class="d-flex justify-content-center gap-4 flex-wrap">
+            <div class="card shadow-lg portal-card text-center p-4" style="width: 250px;">
+                <div class="mb-3">
+                    <i class="bi bi-shield-lock-fill portal-icon text-dark"></i>
+                </div>
+                <h4 class="fw-bold">Admin Portal</h4>
+                <p class="text-muted">Manage products</p>
+                <a asp-area="Admin" asp-controller="Account" asp-action="Login" class="btn btn-dark w-100">Login</a>
+            </div>
+
+            <div class="card shadow-lg portal-card text-center p-4" style="width: 250px;">
+                <div class="mb-3">
+                    <i class="bi bi-person-fill portal-icon text-success"></i>
+                </div>
+                <h4 class="fw-bold">Customer Portal</h4>
+                <p class="text-muted">Browse products and place orders</p>
+                <a asp-area="Customer" asp-controller="Account" asp-action="Login" class="btn btn-success w-100">Login</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
